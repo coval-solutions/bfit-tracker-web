@@ -1,5 +1,6 @@
 import React from "react";
 import AnimationRevealComponent from "../helpers/AnimationRevealPage";
+import Hero from "../components/Hero";
 // import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 // import tw from "twin.macro";
 // import { css } from "styled-components/macro"; //eslint-disable-line
@@ -22,7 +23,7 @@ import AnimationRevealComponent from "../helpers/AnimationRevealPage";
 export default function LandingPage() {
   return (
     <AnimationRevealComponent>
-      <p>Test</p>
+      <Hero />
     </AnimationRevealComponent>
   );
 }

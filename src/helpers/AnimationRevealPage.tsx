@@ -9,7 +9,9 @@ import TrackVisibility from "react-on-screen";
 const StyledDiv = tw.div`font-normal min-h-screen p-8 overflow-hidden`;
 
 const AnimationRevealComponent = (props: any) => {
+  console.log(props);
   let { disabled, children } = props;
+  console.log(disabled === true);
   if (disabled) {
     return <>{children}</>;
   }
@@ -30,7 +32,7 @@ const AnimationRevealComponent = (props: any) => {
 };
 
 const AnimatedSlideInComponent = (props: any) => {
-  const { direction, children, isVisible } = props;
+  let { direction, children, isVisible } = props;
   const x = { target: "0%", initial: "0%" };
 
   if (direction === "left") {
@@ -43,7 +45,7 @@ const AnimatedSlideInComponent = (props: any) => {
     <motion.section
       initial={{ x: x.initial }}
       animate={{
-        x: isVisible && x.target,
+        x: x.target,
         transitionEnd: {
           x: isVisible && 0,
         },
